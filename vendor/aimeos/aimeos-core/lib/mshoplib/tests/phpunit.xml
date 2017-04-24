@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="bootstrap.php">
+	<testsuites>
+		<testsuite name="Aimeos suite">
+			<directory>MShop/</directory>
+		</testsuite>
+		<testsuite name="MAdmin suite">
+			<directory>MAdmin/</directory>
+		</testsuite>
+	</testsuites>
+	<logging>
+		<log type="junit" target="core_lib-mshoplib_test.junit.xml" />
+	</logging>
+</phpunit>

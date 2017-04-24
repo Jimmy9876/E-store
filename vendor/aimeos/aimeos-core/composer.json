@@ -1,0 +1,62 @@
+{
+	"name": "aimeos/aimeos-core",
+	"description": "Full-featured e-commerce components for high performance online shops",
+	"homepage": "https://aimeos.org/",
+	"license": "LGPL-3.0",
+	"keywords": ["e-commerce", "shop", "portal", "market place"],
+	"support": {
+		"source": "https://github.com/aimeos/aimeos-core",
+		"issues": "https://github.com/aimeos/aimeos-core/issues",
+		"forum": "https://aimeos.org/help",
+		"wiki": "https://aimeos.org/docs"
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/aimeos/php-coveralls.git"
+		}
+	],
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"require": {
+		"php": "^5.3.3||^7.0.4",
+		"ext-curl": "*",
+		"ext-dom": "*",
+		"ext-fileinfo": "*",
+		"ext-gd": "*",
+		"ext-json": "*",
+		"ext-mbstring": "*",
+		"ext-pcre": "*",
+		"ext-PDO": "*",
+		"ext-zip": "*",
+		"doctrine/dbal": "~2.0",
+		"psr/http-message": "~1.0"
+	},
+	"require-dev": {
+		"zendframework/zend-diactoros": "~1.3",
+		"satooshi/php-coveralls": "dev-master",
+		"squizlabs/php_codesniffer": "~1.0",
+		"phpunit/phpunit": "~3.7||~4.0||~5.0",
+		"phing/phing": "~2.4"
+	},
+	"suggest": {
+		"apigen/apigen": "Required for generating the API documentation"
+	},
+	"autoload": {
+		"psr-4": {
+			"Aimeos\\MW\\": "lib/mwlib/src/MW/",
+			"Aimeos\\MShop\\": "lib/mshoplib/src/MShop/",
+			"Aimeos\\MAdmin\\": "lib/mshoplib/src/MAdmin/",
+			"Aimeos\\Controller\\Common\\": "controller/common/src/Controller/Common/",
+			"Aimeos\\Controller\\Jobs\\": "controller/common/src/Controller/Jobs/",
+			"Aimeos\\": "."
+		},
+		"classmap": [
+			"lib/mwlib/src",
+			"lib/mshoplib/src",
+			"controller/common/src",
+			"controller/jobs/src",
+			"Bootstrap.php"
+		]
+	}
+}
